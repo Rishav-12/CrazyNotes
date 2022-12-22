@@ -1,11 +1,11 @@
-const buttonElement = document.getElementById("submit");
+const buttonElement = document.getElementById("submitButton");
 buttonElement.addEventListener("click", addNote);
 
 loadNotes();
 
 function addNote() {
-  const noteText = document.getElementById("noteText").value;
-  if(noteText.trim() === "") {
+  const noteInput = document.getElementById("noteInput").value;
+  if(noteInput.trim() === "") {
     return;
   }
 
@@ -14,10 +14,10 @@ function addNote() {
   }
 
   const oldNotes = JSON.parse(localStorage.getItem('listNotes'));
-  oldNotes.push(noteText);
+  oldNotes.push(noteInput);
   localStorage.setItem('listNotes', JSON.stringify(oldNotes));
   
-  addNoteToPage(noteText);
+  addNoteToPage(noteInput);
 }
 
 function loadNotes() {
@@ -30,7 +30,7 @@ function loadNotes() {
 }
 
 function addNoteToPage(text) {
-  const newNote = document.createElement("div");
+  const newNote = document.createElement("li");
   newNote.innerHTML = text;
   newNote.classList.add("note");
   document.getElementsByClassName("notes")[0].appendChild(newNote);

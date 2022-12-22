@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.heading {
+header {
   font-weight: bold;
   text-align: center;
   font-size: 2rem;
@@ -18,7 +18,7 @@
     justify-content: center;
   }
 
-  #noteText {
+  #noteInput {
     width: 35vw;
   }
 }
@@ -30,12 +30,12 @@
   justify-content: center;
 }
 
-#noteText {
+#noteInput {
   width: 50vw;
 }
 
-#submit {
-  margin: 0.3rem;
+#submitButton {
+  margin: 0.5rem 0;
 }
 
 .notes {
@@ -43,10 +43,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  list-style-type: none;
 }
 
 .note {
-  width: 100%;
-  text-align: center;
+  width: 50%;
   margin: 0.5rem 0;
+  overflow-wrap: anywhere;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -8,13 +8,16 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="heading">My Notes App</div>
+    <header>My Notes App</header>
     <div class="input">
-      <input class="form-control" type="text" id="noteText" placeholder="write notes here">
-      <button type="button" class="btn btn-outline-dark" id="submit">add note</button>
+      <div class="mb-3">
+        <label for="noteInput" class="form-label">Write anything you want here!</label>
+        <input class="form-control" type="text" id="noteInput" placeholder="write notes here">
+        <button type="button" class="btn btn-outline-dark" id="submitButton">add note</button>
+      </div>
     </div>
-    <div class="notes">
-    </div>
+    <ul class="notes">
+    </ul>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
   </body>

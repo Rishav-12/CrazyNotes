@@ -30,7 +30,7 @@ function loadNotes() {
 }
 
 function addNoteToPage(text) {
-  const newNote = document.createElement("div");
+  const newNote = document.createElement("li");
   newNote.innerHTML = text;
   newNote.classList.add("note");
   document.getElementsByClassName("notes")[0].appendChild(newNote);

@@ -43,10 +43,11 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  list-style-type: none;
 }
 
 .note {
-  width: 100%;
-  text-align: center;
+  width: 50%;
   margin: 0.5rem 0;
+  overflow-wrap: anywhere;
 }
